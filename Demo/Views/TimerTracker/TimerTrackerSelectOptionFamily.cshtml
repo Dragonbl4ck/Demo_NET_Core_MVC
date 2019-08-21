@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Demo.Models.TimerTrackerAssemblyParts>
+@{
+    ViewData["Title"] = "TimerTrackerSelectOptionFamily";
+}
+
+<h1>TimerTrackerSelectOptionFamily</h1>
+
+@if (Model == null)
+{
+    <option value="">Please verify connection to DB</option>
+}
+else
+{
+    @foreach (var item in Model)
+    {
+        <option value="@item.Family">@item.Family</option>
+    }
+
+}

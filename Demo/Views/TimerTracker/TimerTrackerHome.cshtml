@@ -1,0 +1,91 @@
+﻿@model Demo.Models.TimerTrackerViewModel
+
+@{
+    ViewData["Title"] = "TimerTrackerHome";
+}
+
+<h1>TimerTrackerHome</h1>
+
+<h4>TimerTrackerAssemblyInsert</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="TimerTrackerHome">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>@*El formulario es para el INSERT "Ya funciona el formulario en la funcion INSERT"  :) *@
+            <div class="form-group">
+                <label asp-for="Insert.Tstart" class="control-label"></label>
+                <input asp-for="Insert.Tstart" class="form-control" />
+                <span asp-validation-for="Insert.Tstart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insert.Tstop" class="control-label"></label>
+                <input asp-for="Insert.Tstop" class="form-control" />
+                <span asp-validation-for="Insert.Tstop" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insert.Difference" class="control-label"></label>
+                <input asp-for="Insert.Difference" class="form-control" />
+                <span asp-validation-for="Insert.Difference" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insert.AssemblyNameA" class="control-label"></label>
+                <input asp-for="Insert.AssemblyNameA" class="form-control" />
+                <span asp-validation-for="Insert.AssemblyNameA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insert.AssemblyNameB" class="control-label"></label>
+                <input asp-for="Insert.AssemblyNameB" class="form-control" />
+                <span asp-validation-for="Insert.AssemblyNameB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insert.FamilyName" class="control-label"></label>
+                <select asp-for="Insert.FamilyName" class="custom-select my-1 mr-sm-2" required>
+                    @*Este es el dato que requiero que extraiga de un SELECT from * timerTrackerFamily*@
+                    @if (Model.Parts == null)
+                    {
+                        <option value="">Verify connection to DB</option>
+                    }
+                    else
+                    {
+                        @foreach (var item in Model.Parts)
+                        {
+                            <option value="@item.Family">@item.Family</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="Insert.FamilyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insert.Line" class="control-label"></label>
+                <input asp-for="Insert.Line" class="form-control" />
+                <span asp-validation-for="Insert.Line" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insert.Shift" class="control-label"></label>
+                <input asp-for="Insert.Shift" class="form-control" />
+                <span asp-validation-for="Insert.Shift" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insert.Comments" class="control-label"></label>
+                <input asp-for="Insert.Comments" class="form-control" />
+                <span asp-validation-for="Insert.Comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insert.Date" class="control-label"></label>
+                <input asp-for="Insert.Date" class="form-control" />
+                <span asp-validation-for="Insert.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,171 @@
+USE [IntranetDB]
+GO
+/****** Object:  Table [dbo].[timerTrackerAssemblyInsert]    Script Date: 8/21/2019 8:55:08 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[timerTrackerAssemblyInsert](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[tstart] [varchar](1000) NULL,
+	[tstop] [varchar](1000) NULL,
+	[difference] [varchar](1000) NULL,
+	[assemblynamea] [varchar](1000) NULL,
+	[assemblynameb] [varchar](1000) NULL,
+	[familyname] [varchar](1000) NULL,
+	[line] [varchar](1000) NULL,
+	[shift] [varchar](1000) NULL,
+	[comments] [varchar](1000) NULL,
+	[date] [date] NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[timerTrackerFamily]    Script Date: 8/21/2019 8:55:08 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[timerTrackerFamily](
+	[id] [int] NOT NULL,
+	[family] [nvarchar](255) NULL,
+ CONSTRAINT [PK_timerTrackerFamily] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[timerTrackerAssemblyInsert] ON 
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (1, N'Thu Aug 01 2019 15:29:26 GMT-0500 (Central Daylight Time)', N'Thu Aug 01 2019 15:29:30 GMT-0500 (Central Daylight Time)', N'00:00:03', N'ABCDE', N'DEFGH', N'4K', N'Linea 1', N'1', N'nothing', CAST(N'2019-08-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (2, N'Mon Aug 12 2019 14:04:58 GMT-0500 (Central Daylight Time)', N'Mon Aug 12 2019 14:05:01 GMT-0500 (Central Daylight Time)', N'00:00:03', N'ABCDE', N'DEFGH', N'4K', N'Linea 2', N'2', N'nothing', CAST(N'0001-01-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (3, N'Tue Aug 13 2019 09:54:40 GMT-0500 (Central Daylight Time)', N'Tue Aug 13 2019 09:54:53 GMT-0500 (Central Daylight Time)', N'00:00:12', N'ABCDE', N'DEFGH', N'4K', N'Linea 3', N'3', N'nothing', CAST(N'0001-01-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (4, N'Tue Aug 13 2019 09:54:40 GMT-0500 (Central Daylight Time)', N'Tue Aug 13 2019 09:54:53 GMT-0500 (Central Daylight Time)', N'00:00:12', N'ABCDE', N'DEFGH', N'HD', N'Linea 4', N'1', N'nothing', CAST(N'0001-01-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (6, N'Tue Aug 13 2019 10:07:56 GMT-0500 (Central Daylight Time)', N'Tue Aug 13 2019 10:08:04 GMT-0500 (Central Daylight Time)', N'00:00:08', N'ABCDE', N'DEFGH', N'HD', N'Linea 5', N'2', N'nothing', CAST(N'0001-01-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (9, N'Tue Aug 13 2019 11:52:27 GMT-0500 (Central Daylight Time)', N'Tue Aug 13 2019 11:52:32 GMT-0500 (Central Daylight Time)', N'00:00:05', N'ABCDE', N'DEFGH', N'HD', N'Linea 6', N'3', N'nothing', CAST(N'0001-01-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (10, N'Tue Aug 13 2019 11:57:20 GMT-0500 (Central Daylight Time)', N'Tue Aug 13 2019 11:57:35 GMT-0500 (Central Daylight Time)', N'00:00:14', N'ABCDE', N'DEFGH', N'HD', N'Linea 7', N'1', N'nothing', CAST(N'0001-01-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (11, N'Tue Aug 13 2019 11:57:20 GMT-0500 (Central Daylight Time)', N'Tue Aug 13 2019 11:57:35 GMT-0500 (Central Daylight Time)', N'00:00:14', N'ABCDE', N'DEFGH', N'HD', N'Linea 8', N'2', N'nothing', CAST(N'0001-01-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (12, N'Tue Aug 13 2019 12:09:46 GMT-0500 (Central Daylight Time)', N'Tue Aug 13 2019 12:09:57 GMT-0500 (Central Daylight Time)', N'00:00:11', N'ABCDE', N'DEFGH', N'HD', N'Linea 9', N'3', N'nothing', CAST(N'0001-01-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (13, N'Tue Aug 13 2019 12:09:46 GMT-0500 (Central Daylight Time)', N'Tue Aug 13 2019 12:09:57 GMT-0500 (Central Daylight Time)', N'00:00:11', N'ABCDE', N'DEFGH', N'HD', N'Linea 10', N'1', N'nothing', CAST(N'0001-01-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (20, N'Wed Aug 14 2019 08:52:33 GMT-0500 (Central Daylight Time)', N'Wed Aug 14 2019 08:52:37 GMT-0500 (Central Daylight Time)', N'00:00:04', N'ABCDE', N'DEFGH', N'4Q', N'Linea 11', N'2', N'nothing', CAST(N'0001-01-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (202, N'', N'', N'', N'', N'', N'', N'', N'', N'', CAST(N'0001-01-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (203, N'', N'', N'', N'', N'', N'', N'', N'', N'', CAST(N'0001-01-01' AS Date))
+GO
+INSERT [dbo].[timerTrackerAssemblyInsert] ([id], [tstart], [tstop], [difference], [assemblynamea], [assemblynameb], [familyname], [line], [shift], [comments], [date]) VALUES (204, N'', N'', N'', N'', N'', N'', N'', N'', N'', CAST(N'0001-01-01' AS Date))
+GO
+SET IDENTITY_INSERT [dbo].[timerTrackerAssemblyInsert] OFF
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (1, N'FD')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (2, N'4K')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (3, N'HD')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (4, N'HD3')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (5, N'6X4   6X6   SWAMP')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (6, N'MLX')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (7, N'SWITCHER')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (8, N'DMPS 300')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (9, N'DMPS 150')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (10, N'TP')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (11, N'HD DA')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (12, N'TSR ')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (13, N'PYNG   RMC3')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (14, N'HR')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (15, N'TSW PRD')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (16, N'TPT')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (17, N'CP3   CORE 3')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (18, N'MC3')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (19, N'CEN')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (20, N'DIN')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (21, N'MP')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (22, N'MIX')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (23, N'DSP')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (24, N'MERCURY')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (25, N'INET')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (26, N'C2N')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (27, N'TS 1542')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (28, N'4KZ')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (29, N'DM')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (30, N'MPC3')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (31, N'CAEN')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (32, N'DMC 4KZ')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (33, N'DMC 4KZ C')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (34, N' DIN CENCE 2 POE')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (35, N'DIN CENCN')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (36, N'CCS FF 1')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (37, N'AM 300')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (38, N'CP3 R')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (39, N'DMC CPU3')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (40, N'SHADE MOTOR')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (41, N'NVX')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (42, N'DGE')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (43, N'HORIZON')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (44, N'CLX')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (45, N'SOUND BAR')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (46, N'GLS')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (47, N'CEN   C2N')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (48, N'CP4 R')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (49, N'DIN THSTAT')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (50, N'CPU3')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (51, N'FT2A')
+GO
+INSERT [dbo].[timerTrackerFamily] ([id], [family]) VALUES (52, N'DSP 128')
+GO
